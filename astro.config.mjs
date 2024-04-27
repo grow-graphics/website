@@ -4,7 +4,6 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://learn.grow.graphics/',
-	base: 'https://grow-graphics.github.io/website',
 	integrations: [
 		starlight({
 			title: 'My Docs',
