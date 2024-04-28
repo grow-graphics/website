@@ -1,11 +1,6 @@
 ---
 title: Example Reference
-description: A reference page in my new Starlight docs site.
+description: Example Reference.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
-
-## Further reading
-
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+Aliqua adipisicing id sint sit aute proident nostrud do aute do veniam reprehenderit. Eu esse non occaecat dolore. Non quis anim eu elit magna duis proident quis adipisicing minim occaecat do ex. In laboris consectetur est consectetur voluptate adipisicing.

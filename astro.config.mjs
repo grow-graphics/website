@@ -6,17 +6,14 @@ export default defineConfig({
 	site: 'https://learn.grow.graphics/',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: 'Grow-Graphics GD',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/grow-graphics/gd',
 			},
 			sidebar: [
 				{
-					label: 'Guides',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', link: '/guides/example/' },
-					],
+					label: 'Documentation',
+					autogenerate: { directory: 'documentation' },
 				},
 				{
 					label: 'Reference',
