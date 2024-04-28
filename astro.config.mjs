@@ -6,7 +6,11 @@ export default defineConfig({
 	site: 'https://learn.grow.graphics/',
 	integrations: [
 		starlight({
-			title: 'Grow-Graphics GD',
+			title: 'GD Grow',
+			logo: {
+				src: './src/assets/gdgrowlogo.svg',
+				alt: 'GD Grow',
+			},
 			social: {
 				github: 'https://github.com/grow-graphics/gd',
 			},
