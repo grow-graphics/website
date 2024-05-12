@@ -1,6 +1,6 @@
 ---
-title: Overview
-description: Overview
+title: Reference
+description: Reference
 ---
 
 # Godot 4.2.2 + Go [![Go Reference](https://pkg.go.dev/badge/grow.graphics/gd.svg)](https://pkg.go.dev/grow.graphics/gd)
