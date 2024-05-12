@@ -1,5 +1,5 @@
 ---
-title: 11 - License
+title: License
 description: License
 ---
 
