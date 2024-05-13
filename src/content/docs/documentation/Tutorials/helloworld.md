@@ -50,7 +50,7 @@ func main() {
 use tidy to make sure the project is up to date and all the dependencies are up to date
 
 ```sh
-go mod tidy
+go get -u
 ```
 
 run the project
