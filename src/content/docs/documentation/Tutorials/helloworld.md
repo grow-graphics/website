@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-use tidy to make sure the project is up to date and all the dependencies are up to date
+use `go get -u` to make sure the project and all the dependencies are up to date.
 
 ```sh
 go get -u
