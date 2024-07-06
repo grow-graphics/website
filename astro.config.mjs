@@ -25,7 +25,7 @@ export default defineConfig({
 					order: 2,
 				},
 				{
-					label: 'license',
+					label: 'License',
 					autogenerate: { directory: 'license' },
 					order: 3,
 				},
