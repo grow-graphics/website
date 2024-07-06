@@ -24,6 +24,11 @@ export default defineConfig({
 					autogenerate: { directory: 'reference' },
 					order: 1,
 				},
+				{
+					label: 'license',
+					autogenerate: { directory: 'license' },
+					order: 3,
+				},
 			],
 		}),
 	],
