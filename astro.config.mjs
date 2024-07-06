@@ -17,12 +17,12 @@ export default defineConfig({
 				{
 					label: 'Documentation',
 					autogenerate: { directory: 'documentation' },
-					order: 2,
+					order: 1,
 				},
 				{
 					label: 'Reference',
 					autogenerate: { directory: 'reference' },
-					order: 1,
+					order: 2,
 				},
 				{
 					label: 'license',
