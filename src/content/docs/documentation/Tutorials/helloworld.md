@@ -6,19 +6,19 @@ description: Hello World Example
 ### Hello World Example
 
 
-installing the module
+Installing the module
 
 ```sh
 go install grow.graphics/gd/cmd/gd@master
 ```
 
-create a new go project
+Create a new go project
 
 ```sh
 go mod init main
 ```
 
-create a new main.go file
+Create a new main.go file
 
 ```go
 package main
@@ -34,7 +34,7 @@ type HelloWorld struct {
 }
 
 // Ready implements the Godot Node2D _ready interface (virtual function).
-func (h *HelloWorld) Ready(gd.Context) {
+func (h *HelloWorld) Ready() {
     fmt.Println("Hello World from Go!")
 }
 
@@ -47,7 +47,7 @@ func main() {
 }
 ```
 
-use `go get -u` to make sure the project and all the dependencies are up to date.
+Use `go get -u` to make sure the project and all the dependencies are up to date.
 
 ```sh
 go get -u
@@ -59,11 +59,11 @@ run the project
 gd
 ```
 
-with godot editor running add the `HelloWorld` Node to the the node in the current scene and save the project and close it.
+With godot editor running add the `HelloWorld` Node to the the node in the current scene and save the project and close it.
 
 ![Find hello world in the create node menu using the scene tree](../../../../assets/tutorials/helloworld/helloworld.png)
 
-add it to the scene tree
+Add it to the scene tree.
 
 ![Node tree](../../../../assets/tutorials/helloworld/helloworld2.png)
 

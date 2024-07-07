@@ -3,7 +3,7 @@ title: Name Tutorial
 description: Name Tutorial
 ---
 
-create a new main.go file
+Create a new main.go file
 
 `touch main.go`
 
@@ -26,12 +26,14 @@ type HelloName struct {
 }
 
 
-func (h *HelloName) Ready(godot gd.Context) {
-	h.Button.AsObject().Connect(godot.StringName("pressed"), godot.Callable(h.OnButtonPressed), 0)
+func (h *HelloName) Ready() {
+	tmp := h.Temporary // temporary lifetime for new Godot values.
+	h.Button.AsObject().Connect(tmp.StringName("pressed"), tmp.Callable(h.OnButtonPressed), 0)
 }
 
-func (h *HelloName) OnButtonPressed(godot gd.Context) {
-	h.Text.SetText(godot.String("Hello " + h.Name.GetText(godot).String()))
+func (h *HelloName) OnButtonPressed() {
+	tmp := h.Temporary // temporary lifetime for new Godot values.
+	h.Text.SetText(tmp.String("Hello " + h.Name.GetText(tmp).String()))
 }
 
 func main() {
@@ -43,22 +45,20 @@ func main() {
 }
 ```
 
-run `go get -u` from the terminal and `go mod tidy`
-
-
+Run `go get -u` from the terminal and `go mod tidy`
 this should update the module and install it.
 
 
-after that run `gd` to start the godot project, then save the project in godot.
+After that run `gd` to start the godot project, then save the project in godot.
 
-change the node to a control node, then add `HelloName` as a child of the control node.
+Change the node to a control node, then add `HelloName` as a child of the control node.
 
-then run the project inside godot.
+Then run the project inside godot.
 
 ![Node Tree](../../../../assets/tutorials/name/HelloName.png)
 
 
-if all goes well click the button and you should see hello.
+If all goes well click the button and you should see hello.
 
 
 ![Running Hello](../../../../assets/tutorials/name/runninghello.png)
