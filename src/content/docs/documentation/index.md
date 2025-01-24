@@ -1,7 +1,7 @@
 ---
-title: Grow Graphics Documentation
-description: Grow Graphics Documentation
+title: Graphics GD Documentation
+description: Graphics GD Documentation
 ---
 
-- [Getting Started](./overview/) with Grow Graphics Go Bindings for Godot
+- [Getting Started](./overview/) with Graphics GD (Go + Godot)
 - [About](./overview/about) Grow Graphics GD

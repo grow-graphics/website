@@ -12,36 +12,35 @@ Create a new main.go file
 package main
 
 import (
-	"grow.graphics/gd"
-	"grow.graphics/gd/gdextension"
+	"graphics.gd/classdb"
+	"graphics.gd/classdb/Node2D"
+	"graphics.gd/classdb/TextEdit"
+	"graphics.gd/classdb/Label"
+	"graphics.gd/classdb/Button"
+	"graphics.gd/startup"
 )
 
 type HelloName struct {
-	gd.Class[HelloName, gd.Node2D]
+	classdb.Extension[HelloName, Node2D.Instance]
 
-	Name gd.TextEdit
-	Text gd.Label
+	Name TextEdit.Instance
+	Text Label.Instance
 
-	Button gd.Button
+	Button Button.Instance
 }
 
 
 func (h *HelloName) Ready() {
-	tmp := h.Temporary // temporary lifetime for new Godot values.
-	h.Button.AsObject().Connect(tmp.StringName("pressed"), tmp.Callable(h.OnButtonPressed), 0)
+	h.Button.OnPressed(h.OnButtonPressed)
 }
 
 func (h *HelloName) OnButtonPressed() {
-	tmp := h.Temporary // temporary lifetime for new Godot values.
-	h.Text.SetText(tmp.String("Hello " + h.Name.GetText(tmp).String()))
+	h.Text.SetText("Hello " + h.Name.GetText())
 }
 
 func main() {
-	godot, ok := gdextension.Link()
-	if !ok {
-		return
-	}
-	gd.Register[HelloName](godot)
+	classdb.Register[HelloName]()
+	startup.Engine()
 }
 ```
 

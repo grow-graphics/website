@@ -9,7 +9,7 @@ description: Hello World Example
 Installing the module
 
 ```sh
-go install grow.graphics/gd/cmd/gd@master
+go install graphics.gd/cmd/gd@master
 ```
 
 Create a new go project
@@ -25,12 +25,14 @@ package main
 
 import (
     "fmt"
-    "grow.graphics/gd"
-    "grow.graphics/gd/gdextension"
+
+    "graphics.gd/classdb"
+    "graphics.gd/classdb/Node2D"
+    "graphics.gd/startup"
 )
 
 type HelloWorld struct {
-    gd.Class[HelloWorld, gd.Node2D]
+    classdb.Extension[HelloWorld, Node2D.Instance]
 }
 
 // Ready implements the Godot Node2D _ready interface (virtual function).
@@ -39,11 +41,8 @@ func (h *HelloWorld) Ready() {
 }
 
 func main() {
-    godot, ok := gdextension.Link()
-    if !ok {
-        return
-    }
-    gd.Register[HelloWorld](godot)
+	classdb.Register[HelloWorld]()
+	startup.Engine()
 }
 ```
 
@@ -55,7 +54,7 @@ go get -u
 
 run the project
 
-```sh 
+```sh
 gd
 ```
 
@@ -67,7 +66,7 @@ Add it to the scene tree.
 
 ![Node tree](../../../../assets/tutorials/helloworld/helloworld2.png)
 
-Save the project in Godot Editor. 
+Save the project in Godot Editor.
 
 In godot run the project or by running `gd run` in your terminal.
 
