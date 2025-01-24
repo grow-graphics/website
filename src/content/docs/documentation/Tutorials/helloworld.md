@@ -1,5 +1,5 @@
 ---
-title: Hello World Example
+title: Hello World
 description: Your first hello world!
 ---
 
