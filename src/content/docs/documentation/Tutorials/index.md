@@ -3,4 +3,5 @@ title: Tutorials
 description: Tutorials
 ---
 
- - [Hello World Example](./hello-world)
+ - [Hello World](./helloworld)
+ - [Hello Name](./helloname) (UI)

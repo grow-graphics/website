@@ -1,6 +1,6 @@
 ---
 title: Hello World Example
-description: Hello World Example
+description: Your first hello world!
 ---
 
 ### Hello World Example

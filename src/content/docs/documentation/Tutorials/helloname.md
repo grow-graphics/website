@@ -1,6 +1,6 @@
 ---
-title: Name Tutorial
-description: Name Tutorial
+title: Hello Name
+description: Simple UI example.
 ---
 
 Create a new main.go file
