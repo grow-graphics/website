@@ -1,4 +1,4 @@
-import { defineConfig } from "astro/config";
+import { defineConfig, passthroughImageService } from "astro/config";
 import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
@@ -7,29 +7,33 @@ export default defineConfig({
   redirects: {
     "/": "/guide",
   },
+  image: {
+    service: passthroughImageService(),
+  },
   integrations: [
     starlight({
       title: "the.graphics.gd/guide",
 
-      social: {
-        github: "https://github.com/quaadgras/graphics.gd",
-      },
+      social: [
+        {
+          icon: "github",
+          label: "Github",
+          href: "https://github.com/quaadgras/graphics.gd",
+        },
+      ],
       customCss: ["./src/styles/iframe.css"],
       sidebar: [
         {
           label: "Guide",
           autogenerate: { directory: "guide" },
-          order: 1,
         },
         {
           label: "Reference",
           autogenerate: { directory: "reference" },
-          order: 2,
         },
         {
           label: "License",
           autogenerate: { directory: "license" },
-          order: 3,
         },
       ],
     }),
