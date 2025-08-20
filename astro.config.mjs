@@ -29,7 +29,24 @@ export default defineConfig({
         },
         {
           label: "Reference",
-          autogenerate: { directory: "reference" },
+          items: [
+            {
+              label: "startup",
+              link: "https://pkg.go.dev/graphics.gd/startup",
+            },
+            {
+              label: "classdb",
+              link: "https://pkg.go.dev/graphics.gd/classdb",
+            },
+            {
+              label: "shaders",
+              link: "https://pkg.go.dev/graphics.gd/shaders",
+            },
+            {
+              label: "variant",
+              link: "https://pkg.go.dev/graphics.gd/variant",
+            },
+          ],
         },
         {
           label: "License",

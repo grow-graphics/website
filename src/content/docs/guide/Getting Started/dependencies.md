@@ -1,5 +1,6 @@
 ---
 title: Dependencies
+slug: guide/dependencies
 sidebar:
   order: 2
 ---

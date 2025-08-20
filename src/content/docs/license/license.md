@@ -1,8 +1,9 @@
 ---
 title: License
-description: This documentation is licensed under the MIT license.
+slug: license
+sidebar:
+  label: MIT
 ---
-
 Copyright (C) 2024 Quentin Quaadgras, Kamei Kojirou.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

@@ -1,5 +1,6 @@
 ---
 title: Hello World
+slug: guide/hello-world
 sidebar:
   order: 10
 ---
