@@ -32,7 +32,7 @@ import (
 )
 
 type HelloWorld struct {
-    classdb.Extension[HelloWorld, Node2D.Instance]
+    Node2D.Extension[HelloWorld]
 }
 
 // Ready implements the Godot Node2D _ready interface (virtual function).
